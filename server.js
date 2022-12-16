@@ -16,7 +16,7 @@ app.get('/', (request, response) => {
     response.render('index', { text: "Passing text from server.js to index.ejs" })  // render file with second param passed down to said file
  })
 
-app.listen(port)
+// app.listen(port)
 
 // fs.readFile('./index.html', function (err, html) {
 //     if (err) {
@@ -38,6 +38,8 @@ app.listen(port)
 
 // console.log("It worked!")
 
-const user_router = require("./routes/projects")
+const project_router = require("./routes/projects")
 
-app.use('/projects', user_router)
+app.use('/projects', project_router)
+
+app.listen(port)
