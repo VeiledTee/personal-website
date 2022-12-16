@@ -1,9 +1,18 @@
-$(document).ready(function(){
-
-    // jQuery methods go here...
-    
-  
-  });
+fetch('', {
+  headers: {
+    "Authorization": "Token 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"
+  }
+})
+.then(response => response.json())
+.then(data => {
+  console.log(data)
+})
+const list = document.getElementById('repo-list')
+data.forEach(element => {
+  const item = document.createElement('li');
+  item.innerHTML = repo.name;
+  list.appendChild(item);
+});
 
 // var user_url = 'https://api.github.com/users/' + username + '/repos';
 
