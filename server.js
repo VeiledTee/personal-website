@@ -5,6 +5,7 @@ const app = express()
 const port = 3000
 
 app.set('view engine', 'ejs')
+app.use(express.static(__dirname + '/public/'));
 
 app.get('/', (request, response) => {
     console.log('Homepage')  // output in console
@@ -39,7 +40,9 @@ app.get('/', (request, response) => {
 // console.log("It worked!")
 
 const project_router = require("./routes/projects")
+const test_router = require("./routes/test")
 
 app.use('/projects', project_router)
+app.use('/test', test_router)
 
 app.listen(port)

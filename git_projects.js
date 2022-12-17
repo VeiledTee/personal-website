@@ -1,17 +1,20 @@
-fetch('', {
-  headers: {
-    "Authorization": "Token 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"
-  }
-})
+// var table = '<table><tr><th>Repo</th></tr>';
+fetch('https://api.github.com/users/VeiledTee/repos')
 .then(response => response.json())
 .then(data => {
-  console.log(data)
-})
-const list = document.getElementById('repo-list')
-data.forEach(element => {
-  const item = document.createElement('li');
-  item.innerHTML = repo.name;
-  list.appendChild(item);
+  // Create an HTML table
+  var table = '<table><tr><th>Name</th><th>Description</th></tr>';
+
+  // Loop through the data and add each row to the table
+  for (var i = 0; i < data.length; i++) {
+    table += '<tr><td>' + data[i].name + '</td><td>' + data[i].description + '</td></tr>';
+  }
+
+  // Close the table
+  table += '</table>';
+
+  // Add the table to the page
+  document.getElementById('table').innerHTML = table;
 });
 
 // var user_url = 'https://api.github.com/users/' + username + '/repos';

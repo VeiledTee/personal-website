@@ -7,10 +7,10 @@ const project_app = express.Router()
 // project_json = jQuery.getJSON("https://api.github.com/users/VeiledTee/repos")
 // console.log(project_json);
 project_app.get("/", (requests, response) => {
-    // console.log('Project page');
+    console.log('Projects!');
     // console.log(project_json);
     // response.send('A LIST OF PROJECTS')  // render file with second param passed down to said file
-    response.render('projects', { text: "I am words" })  // render file with second param passed down to said file
+    response.render('projects')  // render file with second param passed down to said file
 })
 
 project_app.get('/:id', (request, response) => {
