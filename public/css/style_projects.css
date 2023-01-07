@@ -1,0 +1,11 @@
+.repo-table table {
+    width: 100%; /* Set the table to take up the full width of the page */
+    margin: 0 5%; /* Add 5% margins on the left and right sides of the table */
+  }
+
+.repo-table td {
+    border: 1px solid black;
+    padding: 10px;
+    border-bottom: 1px solid black;
+    width: 20%; /* Set the width of each column to 20% */
+  }

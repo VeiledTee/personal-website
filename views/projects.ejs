@@ -1,21 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet"  type="text/css" href="/css/style_projects.css">
   <title>Ethan's Projects</title>
 </head>
-<body>
+<body>  
   <h1>GitHub Repositories</h1>
+  <h3>Personal Projects</h3>
+  <table id="nonforked-repos-table" class="repo-table">
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </table>
+  <h3>Forked Repositories</h3>
+  <table id="forked-repos-table" class="repo-table">
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </table>
 
-  <div id="table"></div>
+  <script src="/JS/git_projects.js" type="application/javascript"></script>
 
-  <script>
+</body>
+</html>
+
+  <!-- <script>
     console.log("JS")
     fetch('https://api.github.com/users/VeiledTee/repos')
       .then(response => response.json())
       .then(data => {
         // Create an HTML table
         var table = '<table><tr><th>Name</th><th>Description</th></tr>';
+        console.log(data)
 
         // Loop through the data and add each row to the table
         for (var i = 0; i < data.length; i++) {
@@ -28,6 +46,4 @@
         // Add the table to the page
         document.getElementById('table').innerHTML = table;
       });
-  </script>
-</body>
-</html>
+  </script> -->

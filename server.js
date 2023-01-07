@@ -1,11 +1,10 @@
-// const http = require('http')
-// const fs = require('fs')
+// npm run devStart
 const express = require('express')
 const app = express()
 const port = 3000
 
 app.set('view engine', 'ejs')
-app.use(express.static(__dirname + '/public/'));
+app.use(express.static('public'));
 
 app.get('/', (request, response) => {
     console.log('Homepage')  // output in console
