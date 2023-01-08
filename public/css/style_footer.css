@@ -3,8 +3,8 @@ footer {
     color: #fff;
     padding: 20px;
     text-align: center;
-    display: flex;
-    justify-content: flex-start;
+    /* display: flex;
+    justify-content: flex-start; */
   }
 
 a {
@@ -13,19 +13,8 @@ a {
 
 nav {
   font-size: 0.9em;
-  float: center;
+  text-align: center;
 }
-
-/* nav ul {
-  display: center;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-nav li {
-  margin: 0 10px;
-} */
 
 nav a {
   color: #ffffff;

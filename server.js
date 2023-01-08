@@ -1,5 +1,10 @@
 // npm run devStart
-// npx serve
+// colours: 
+// purple (dark) - 2a3250
+// purple (lighter) - 404e7c
+// blue - 42bfdd
+// beige - f0e2e7
+
 const express = require('express')
 const app = express()
 const port = 3000

@@ -10,7 +10,9 @@ table {
     border-collapse: collapse;
   }
 
-td {
+
+
+.repo-table td {
     border: 1px solid black;
 }
 
@@ -28,6 +30,8 @@ td {
     /* font-style: italic;  make text italic */
     /* text-decoration: underline;  underline text */
     background-color: #404e7c;  /* self-explanitory */
+    border: 1px solid #404e7c;
+    height: 50px;
 }
 
 .repo-table #header:hover {
