@@ -1,27 +1,27 @@
 footer {
-    background-color: #2a3150;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    /* display: flex;
+	background-color: #2a3150;
+	color: #fff;
+	padding: 20px;
+	text-align: center;
+	/* display: flex;
     justify-content: flex-start; */
-  }
+}
 
 a {
-  color: #42bfdd;
+	color: #42bfdd;
 }
 
 nav {
-  font-size: 0.9em;
-  text-align: center;
+	font-size: 0.9em;
+	text-align: center;
 }
 
 nav a {
-  color: #ffffff;
-  text-decoration: none;
+	color: #ffffff;
+	text-decoration: none;
 }
 
 nav a:hover {
-  color: #f0e2e7;
-  transform: scale(1.5);
+	color: #f0e2e7;
+	transform: scale(1.5);
 }

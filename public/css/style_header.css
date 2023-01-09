@@ -1,47 +1,47 @@
 header {
-    background-color: #2a3150;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
-  }
-  
-  .logo {
-    font-size: 1.5em;
-  }
-  
-  .logo img {
-    height: 50px;
-    width: 50px;
-    object-fit: cover;
-  }
-  
-  nav {
-    font-size: 0.9em;
-  }
-  
-  nav ul {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  nav li {
-    margin: 0 10px;
-  }
-  
-  nav a {
-    color: #ffffff;
-    text-decoration: none;
-  }
-  
-  nav a:hover {
-    color: #f0e2e7;
-    transform: scale(1.5);
-  }
+	background-color: #2a3150;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 20px;
+}
 
-  body {
-    font-family: 'Roboto Mono', monospace;
+.logo {
+	font-size: 1.5em;
+}
+
+.logo img {
+	height: 50px;
+	width: 50px;
+	object-fit: cover;
+}
+
+nav {
+	font-size: 0.9em;
+}
+
+nav ul {
+	display: flex;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+nav li {
+	margin: 0 10px;
+}
+
+nav a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+nav a:hover {
+	color: #f0e2e7;
+	transform: scale(1.5);
+}
+
+body {
+	font-family: 'Roboto Mono', monospace;
 }
