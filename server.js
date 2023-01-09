@@ -13,7 +13,7 @@ app.set('view engine', 'ejs')
 app.use(express.static('public'));
 
 app.get('/', (request, response) => {
-    console.log('Homepage')  // output in console
+    // console.log('Homepage')  // output in console
     // response.status(500).send("Hello!")  // chain status and messages
     // response.status(500).json({msg : "Yikes"})  // chain status and json messages
     // response.json({msg : "Yikes"})  // send json messages
@@ -46,8 +46,10 @@ app.get('/', (request, response) => {
 
 const project_router = require("./routes/projects")
 const test_router = require("./routes/test")
+const lecture_router = require("./routes/teaching")
 
 app.use('/projects', project_router)
 app.use('/test', test_router)
+app.use('/teaching', lecture_router)
 
 app.listen(port)
