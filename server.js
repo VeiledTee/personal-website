@@ -52,4 +52,16 @@ app.use('/projects', project_router);
 app.use('/test', test_router);
 app.use('/teaching', lecture_router);
 
-app.listen(port);
+const server = app.listen(port, () => {
+    console.log(`App running on port ${port}.`);
+});
+server.on('error', (e) => {
+    if (e.code === 'EADDRINUSE') {
+        console.log('Address in use, retrying...');
+        setTimeout(() => {
+            server.close();
+            server.listen(port);
+        }, 1000);
+    }
+});
+
