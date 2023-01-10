@@ -2,35 +2,41 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <link rel="stylesheet"  type="text/css" href="/css/style_projects.css">
-  <title>Projects</title>
-</head>
+	<head>
+		<link rel="stylesheet" type="text/css" href="/css/style_projects.css" />
+		<title>Projects</title>
+	</head>
 
-<body>  
-  <h1>Development Portfolio</h1>
-  <hr>
-    <p> Click on a project to be taken to the source code. </p>
-  <hr>
-  <h2>Personal Projects</h2>
-  <table id="nonforked-repos-table" class="repo-table">
-    <tr id="header">
-      <th width="20%">Name</th>
-      <th width="80%">Description</th>
-    </tr>
-  </table>
-  <h2>Forked Repositories</h2>
-  <table id="forked-repos-table" class="repo-table">
-    <tr id="header">
-      <th width="20%">Name</th>
-      <th width="80%">Description</th>
-    </tr>
-  </table>
+	<body>
+		<h1>Development Portfolio</h1>
+		<hr />
+		<p>Click on a project to be taken to the source code.</p>
+		<hr />
+		<h2>Personal Projects</h2>
+		<table id="nonforked-repos-table" class="repo-table">
+			<tr id="header">
+				<th width="15%">Name</th>
+				<th width="70%">Description</th>
+				<th width="15%">Tools</th>
+			</tr>
+		</table>
+		<h2>Professional Work</h2>
+		<table id="forked-repos-table" class="repo-table">
+			<tr id="header">
+				<th width="20%">Name</th>
+				<th width="80%">Description</th>
+			</tr>
+			<tr>
+				<th>Beanpod</th>
+				<th>
+					I was responsible for the development and end-to-end testing of an e-commerce site for the company.
+				</th>
+			</tr>
+		</table>
 
-  <script src="/JS/git_projects.js" type="application/javascript"></script>
-
-</body>
-<hr>
+		<script src="/JS/git_projects.js" type="application/javascript"></script>
+	</body>
+	<hr />
 </html>
 
 <%- include('footer.html') %>

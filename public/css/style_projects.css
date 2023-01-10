@@ -30,7 +30,7 @@ table {
 	/* text-decoration: underline;  underline text */
 	background-color: #404e7c; /* self-explanitory */
 	border: 1px solid #404e7c;
-	height: 50px;
+	height: 60px;
 }
 
 .repo-table #header:hover {
