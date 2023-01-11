@@ -10,18 +10,28 @@ table {
 	border-collapse: collapse;
 }
 
+/* Table cell */
 .repo-table td {
 	padding: 5px;
 	border: 1px solid black;
 }
 
-.repo-table tr:hover {
+/* Table row when hovering */
+.repo-table tr:hover,
+tr:focus {
 	background-color: #f0e2e7;
 	transform: scale(1.01);
 	box-shadow: 2px 2px 10px rgba(black);
 	border-color: black;
 }
 
+.row:hover .fa-cell {
+	/* animation: spin 1s linear infinite; */
+	transform: scale(1.5);
+	transition: transform 0.75s;
+}
+
+/* Table header in general */
 .repo-table #header {
 	color: #ffffff; /* colour text */
 	font-weight: bold; /* make text bold */
@@ -33,7 +43,35 @@ table {
 	height: 60px;
 }
 
-.repo-table #header:hover {
+/* Table header when hovering */
+.repo-table #header:hover,
+#header:focus {
 	background-color: #404e7c;
 	transform: scale(1);
+}
+
+/* Font Awesome Icons */
+.fa-cell {
+	text-align: center;
+	transition: all 0.5s ease-in-out;
+	transform: scale(1);
+	font-size: 24px;
+}
+
+/* .fa-cell:hover i {
+	animation: spin 1s linear infinite;
+} */
+
+/* spin animation for icons in project table */
+.spin {
+	animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
 }

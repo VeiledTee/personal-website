@@ -19,49 +19,57 @@
 // }
 
 async function getRepos() {
+	console.log('in function');
 	const response = await fetch(`https://api.github.com/users/VeiledTee/repos`);
 	const data = await response.json();
 	const non_fork_table = document.getElementById('nonforked-repos-table');
 	const fork_table = document.getElementById('forked-repos-table');
 	const extensionMapping = {
-		"javascript": "fab fa-js-square",
-		"python": "fab fa-python",
-		"java": "fab fa-java",
-		"html": "fab fa-html5",
-		"css": "fab fa-css3-alt",
+		javascript: 'fab fa-js-square',
+		python: 'fab fa-python',
+		java: 'fab fa-java',
+		html: 'fab fa-html5',
+		css: 'fab fa-css3-alt',
 	};
-	
+
 	for (let i = 0; i < data.length; i++) {
 		const repo = data[i];
-		// console.log(repo);
+		// console.log(repo.name);
 		if (repo.fork == false && repo.name != 'game-development' && repo.name != 'python-case-studies') {
 			const row = document.createElement('tr');
+			row.className = 'row';
 			const nameCell = document.createElement('td');
 			nameCell.textContent = repo.name;
+			console.log(nameCell.textContent);
 			const descCell = document.createElement('td');
 			descCell.textContent = repo.description;
 			const urlRedirect = document.createElement('a');
 			urlRedirect.href = repo.html_url;
 			urlRedirect.target = '_blank';
 			urlRedirect.innerHTML = 'click';
-			// console.log(repo.html_url)
-			// let icons = await getExtensions(repo.html_url);
-			// console.log(repo.topics);
-			row.appendChild(nameCell);
-			row.appendChild(descCell);
-			const topicArray = repo.topics
+			const toolCell = document.createElement('td');
+			toolCell.className = 'fa-cell';
+			const topicArray = repo.topics;
+
 			for (let i = 0; i < topicArray.length; i++) {
-				if(extensionMapping.hasOwnProperty(topicArray[i])) {
+				if (extensionMapping.hasOwnProperty(topicArray[i])) {
 					let icon_class = extensionMapping[topicArray[i]];
-					let icon = `<i class="${icon_class}"></i>`;
-					let parser = new DOMParser();
-					let iconElem = parser.parseFromString(icon, "text/html").querySelector("i");
-					row.appendChild(iconElem);
+					// let icon = `<i class="${icon_class}"></i>`;
+					let icon = document.createElement('i');
+					icon.className = icon_class;
+					console.log(icon.className);
+					// let parser = new DOMParser();
+					// let iconElem = parser.parseFromString(icon, "text/html").querySelector("i");
+					toolCell.appendChild(icon);
 				}
 			}
 			row.addEventListener('click', function () {
 				window.open(repo.html_url);
 			});
+			row.appendChild(nameCell);
+			row.appendChild(descCell);
+			row.appendChild(toolCell);
+
 			non_fork_table.appendChild(row);
 		}
 		// else {
@@ -83,6 +91,5 @@ async function getRepos() {
 		// }
 	}
 }
-
+console.log('hello');
 getRepos();
-

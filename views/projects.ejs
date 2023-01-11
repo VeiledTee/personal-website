@@ -1,9 +1,10 @@
-<%- include('header.html') %>
-
 <!DOCTYPE html>
 <html lang="en">
+	<%- include('header.html') %>
 	<head>
 		<link rel="stylesheet" type="text/css" href="/css/style_projects.css" />
+		<link rel="stylesheet" type="text/css" href="/fontawesome/css/all.min.css" />
+
 		<title>Projects</title>
 	</head>
 
@@ -17,23 +18,24 @@
 			<tr id="header">
 				<th width="15%">Name</th>
 				<th width="70%">Description</th>
-				<th width="15%">Tools</th>
+				<th width="15%" class="fa-cell">Tools</th>
 			</tr>
 		</table>
 		<h2>Professional Work</h2>
 		<table id="forked-repos-table" class="repo-table">
 			<tr id="header">
-				<th width="20%">Name</th>
-				<th width="80%">Description</th>
+				<th width="15%">Name</th>
+				<th width="70%">Description</th>
+				<th width="15%" class="fa-cell">Tools</th>
 			</tr>
-			<tr>
+			<tr class="row">
 				<th>Beanpod</th>
 				<th>
 					I was responsible for the development and end-to-end testing of an e-commerce site for the company.
 				</th>
+				<th><i class="fa-brands fa-shopify"></i></th>
 			</tr>
 		</table>
-
 		<script src="/JS/git_projects.js" type="application/javascript"></script>
 	</body>
 	<hr />
